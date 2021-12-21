@@ -1,0 +1,19 @@
+.search-box{
+    display: flex;
+    align-items: flex-end;
+    float: right;
+    width: 200px;
+}
+
+.container{
+    padding: 20px 80px;
+    height: 100%;
+    overflow: auto;
+}
+
+.completion-title{
+    font: bold;
+    font-size: 20px;
+    color: darkblue;
+    text-align: center;
+}

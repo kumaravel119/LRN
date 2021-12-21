@@ -1,0 +1,32 @@
+ion-toolbar.modal-header {
+  --background: var(--app-primary-color);
+  --color: var(--app-secondary-color);
+}
+
+ion-toolbar.modal-footer {
+  --background: var(--app-quinary-color);
+}
+
+.modal-title {
+  word-wrap: break-word;
+  width: 85%;
+}
+.header-title {
+  font-size: var(--app-heading1-font-size);
+}
+
+.title-font{
+  color: darkblue;
+  font-size: large;
+  font-weight: bold;
+}
+.modal-popup-size{
+  height: 100%;
+  padding: 15px;
+}
+ion-backdrop{
+  ::part(content) {
+    /* Styles to apply to the foo part */
+    height: 100%;
+  }
+}

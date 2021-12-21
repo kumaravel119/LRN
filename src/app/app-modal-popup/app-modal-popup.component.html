@@ -1,0 +1,21 @@
+<div class="modal-popup-size">
+  <ion-header id="modal-popup">
+    <ion-toolbar class="modal-header title-font" mode="md">
+      <ion-title tabindex="0" id="popup_title" slot="start" class="modal-popup-title title-font header-title">
+        {{ header }}
+      </ion-title>
+  
+      <ion-title
+        slot="end"
+        tabindex="0"
+        aria-label="close popup"
+        (keyup.enter)="closePopup()"
+        (click)="closePopup()"
+        class="modal-popup-title add-pointer"
+      >
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ng-template #template></ng-template>
+</div>

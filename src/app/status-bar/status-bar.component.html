@@ -1,0 +1,18 @@
+<div class="container">
+        <ion-grid *ngFor="let item of data">
+            <div class="status-bar">
+                <ion-row>
+                    <ion-col></ion-col>
+                    <ion-col size="6" size-xs="12" size-sm="12" size-md="6" size-xl="8" size-lg="8">
+                        <ion-label class="data-value" *ngIf="item.admin">{{ item.admin }}</ion-label>
+                        <ion-label class="data-value" *ngIf="!item.admin">{{ item.value }}</ion-label></ion-col>
+                    <ion-col></ion-col>
+                </ion-row>
+                <ion-row >
+                    <ion-col></ion-col>
+                    <ion-col size="6" size-xs="12" size-sm="12" size-md="6" size-xl="8" size-lg="8"><ion-text class="item-name">{{ item.name }}</ion-text></ion-col>
+                    <ion-col></ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+</div>

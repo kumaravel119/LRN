@@ -1,0 +1,22 @@
+<div>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <app-dropdown
+                name="selectData"
+                [placeholder]="module"
+                [data]="selectData"
+                displayBy="name"
+                value="selectData.name"
+                [(ngModel)]="selectedData"
+                (ngModelChange)="updateValue($event)"
+                ></app-dropdown>
+            </ion-col>
+        </ion-row><br><br><br><br>
+        <ion-row>
+            <ion-col>
+                <app-dropdown></app-dropdown>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

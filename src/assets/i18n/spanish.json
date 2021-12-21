@@ -1,0 +1,14 @@
+{
+    "id":3,
+    "login":{
+        "img":"",
+        "title":"Sécurité de l'information : un aperçu",
+        "content":"Ce cours présente les bases de la sécurité de l'information, les meilleures pratiques pour assurer la sécurité des informations et ce qu'il faut faire en cas de violation.",
+        "time":"~45 minutes",
+        "due":"23 sept."
+    },
+    "language choose":{
+        "language":"Langue",
+        "calender":"Ajouter au calendrier linguistique"
+    }
+}

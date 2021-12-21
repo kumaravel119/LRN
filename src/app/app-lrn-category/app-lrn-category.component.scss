@@ -1,0 +1,47 @@
+.row-alignment{
+    display: flex;
+    align-items: center;
+}
+
+.tabs li:before{
+    color: red;
+}
+
+.audit-managecategory-parent {
+    height: 100%;
+    overflow-y: auto;
+    background: var(--app-quinary-color);
+    padding: 0 15px 100px 15px;
+  }
+
+  .report-parent {
+    background-color: var(--app-secondary-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .list{
+      display: inline;
+  }
+
+  .breadcrumb-text {
+    cursor: pointer;
+    font-family: var(--app-medium-font);
+    font-size: var(--app-heading2-font-size);
+    color: var(--app-tertiary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .active {
+    padding-bottom: 5px;
+    color: darkblue;
+    // border-bottom: 2px solid var(--app-primary-color);
+  }
+
+  .active:hover {
+    padding-bottom: 5px;
+    background-color: red;    // border-bottom: 2px solid var(--app-primary-color);
+  }

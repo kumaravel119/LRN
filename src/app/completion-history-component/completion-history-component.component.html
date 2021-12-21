@@ -1,0 +1,44 @@
+<div class="container">
+<ion-grid>
+    <ion-row>
+        <ion-col>
+            <ion-button>Back</ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-text class="completion-title">Completion History</ion-text>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <!-- <ion-segment value="all" ngDefaultControl>
+                <ion-segment-button value="2021" class="seg-texting text-font">2021</ion-segment-button>
+                <ion-segment-button value="2020" class="seg-texting text-font">
+                    2020
+                </ion-segment-button>
+            </ion-segment> -->
+            <ion-button>2021</ion-button>
+            <ion-button>2020</ion-button>
+        </ion-col>
+        <ion-col>
+            <div class="search-box">
+                <ion-searchbar></ion-searchbar>
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-app-table-view
+            [title]="title"
+            [data]="gridData"></app-app-table-view>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-app-table-view
+            [title]="dish"
+            [data]="gridDisclosures"
+            [view]="true"></app-app-table-view>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+</div>

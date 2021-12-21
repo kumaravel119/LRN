@@ -1,0 +1,13 @@
+{
+    "login":{
+        "img":"",
+        "title":"Seguridad de la información: descripción general",
+        "content":"Este curso presenta los conceptos básicos de la seguridad de la información, las mejores prácticas para mantener la información segura y qué hacer en caso de una infracción.",
+        "time":"~45 minutos",
+        "date":"23 de septiembre"
+    },
+    "language choose":{
+        "language":"Idioma",
+        "calender":"Añadir al calendario"
+    }
+}

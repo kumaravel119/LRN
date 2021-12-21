@@ -1,0 +1,13 @@
+{
+    "login":{
+        "img":"",
+        "title":"Information Security: An Overview",
+        "content":"This course introduces the fundamentals of information security, best practices for keeping information safe, and what to do in the event of a breach.",
+        "time":"~45 Mins",
+        "date":"Past due 23 Sep 2021"
+    },
+    "language choose":{
+        "language":"Language",
+        "calender":"Add to Calender"
+    }
+}

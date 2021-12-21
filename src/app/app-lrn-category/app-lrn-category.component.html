@@ -1,0 +1,25 @@
+<div class="audit-managecategory-parent">
+    <ion-grid>
+        <ion-row class="row-alignment">
+            <ion-col size="3" size-xs="4" size-sm="4" size-xl="6" size-md="3" size-lg="6">
+                <div class="tabs">
+                    <ul>
+                        <li class="list" *ngFor="let tab of tabName; let i = index" (click)="uiSelectTab(i)">
+                            <ion-text [class.active]="i === activeTab" class="breadcrumb-text">{{ tab.name }}</ion-text>
+                        </li>
+                    </ul>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <div *ngIf="activeTab === 1">
+        <!-- <app-lrm-home></app-lrm-home> -->
+        </div>
+        <div *ngIf="activeTab === 2">
+            <app-lrm-myqueue></app-lrm-myqueue>
+        </div>
+        <div *ngIf="activeTab === 3">
+            <app-lrn-disclosures></app-lrn-disclosures>
+        </div>
+    </ion-grid>
+</div>

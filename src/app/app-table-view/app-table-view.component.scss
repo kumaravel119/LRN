@@ -1,0 +1,54 @@
+.title{
+    color: darkblue;
+    font-size: 25px;
+}
+
+.create-coloumn{
+    display: flex;
+}
+ion-col{
+    width:  auto;
+    min-width: 100px;
+    // max-width: 300px;
+}
+
+.button{
+    display: flex;
+    float: right;
+}
+
+.print{
+    display: flex;
+    padding-right: 20px;
+}
+
+.text-font{
+    color: darkblue;
+    font-size: 20px;
+}
+
+.td-header{
+    color: darkblue;
+    font-size: 18px;
+    font: bold;
+}
+
+.td-col-space{
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+ ion-row:nth-child(odd) {
+    .create-coloumn{
+        background: lightgrey;
+        height: 50px;
+        align-items: center;
+    }
+  }
+  
+//   ion-row:nth-child(even) {
+//     background: blue;
+//   }
+#customers ion-col:nth-child(even){background-color: red;}
