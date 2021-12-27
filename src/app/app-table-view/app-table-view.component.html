@@ -51,22 +51,36 @@
 </ion-content> -->
 
 
-    <ion-grid>
-        <ion-row>
+    <ion-grid class="parent">
+        <ion-row class="apply-padding">
             <ion-col>
-                <ion-label class="title">{{ title }}</ion-label>
+                <ion-label class="title" tabindex="0" alt="text" class="table-title">{{ title }}</ion-label>
             </ion-col>
-            <ion-col>
-                <ion-button class="button" *ngIf="view">View Communication History</ion-button>
+            <ion-col >
+                <button ion-button class="button-history" *ngIf="view">View Communication History
+                  <i class="material-icons-outlined">history</i>
+                </button>
             </ion-col>
         </ion-row>
         <div >
             <ion-row *ngIf="gridData && gridData.columns" class="create-coloumn td-col-space">
                 <ng-container *ngFor="let item of gridData.columns">
                     <ion-col size="{{item.size}}">
-                        <ion-label class="td-header td-col-space">
-                            {{ item.label}}
-                        </ion-label>
+                        <div 
+                            (click)="sortColumn(item)"
+                            >
+                            <ion-label class="td-header td-col-space text-font-header" tabindex="0" alt="text">
+                                {{ item.label}}
+                                <div>
+                                    <div *ngIf="item.sort && item.sort === 'asc'" class="asc-icon">
+                                        <i class="material-icons-outlined">vertical_align_bottom</i>
+                                    </div>
+                                    <div *ngIf="item.sort && item.sort === 'desc'" class="desc-icon">
+                                        <i class="material-icons-outlined">vertical_align_top</i>
+                                    </div>
+                                </div>
+                            </ion-label>
+                        </div>
                     </ion-col>
                 </ng-container>
             </ion-row>    
@@ -74,48 +88,63 @@
         <div>
             <ion-row class="create-coloumn td-col-space" *ngFor="let item of gridData && gridData.rows" id="customer">
                 <ng-container *ngFor="let row of item">
-                    <ion-col class="create-coloumn" size="{{row.size}}">
-                        <div *ngIf="row.type === 'text'">
-                            <ion-label>
+                    <ion-col class="create-coloumn text-font-data" size="{{row.size}}" tabindex="0">
+                        <div *ngIf="row.type === 'text'" >
+                            <ion-label appSearch [innerHTML]="row.value">
                                 {{ row.value}}
                             </ion-label>
                         </div>  
-                        <div *ngIf="row.type === 'label'">
-                            <ion-label>
-                                {{ row.value}}
+                        <div *ngIf="row.type === 'label'" alt="txet">
+                            <ion-label class="link" appSearch [innerHTML]="row.value" >
+                                {{ row.value }}
                             </ion-label>
                         </div>  
                         <div *ngIf="row.type === 'dropdown'">
-                            <ion-label>
+                            <ion-label appSearch [innerHTML]="row.value">
                                 {{ row.value}}
                             </ion-label>
                         </div>  
                         <div *ngIf="row.type === 'check'">
-                            <ion-label>
+                            <ion-label appSearch [innerHTML]="row.value">
                                 {{ row.value}}
                             </ion-label>
                         </div>  
                         <div *ngIf="row.type === 'toggle'">
-                            <ion-label>
+                            <ion-label appSearch [innerHTML]="row.value">
                                 {{ row.value}}
                             </ion-label>
                         </div>   
                         <div *ngIf="row.type==='labelStatus'">
-                            <ion-label>
+                            <ion-label appSearch [innerHTML]="row.value">
                                 {{ row.value }}
                             </ion-label>
                         </div>
-                        <div *ngIf="row.type==='action'" class="print">
-                            <ion-icon ios="ios-print" md="md-print"></ion-icon>
-                        </div>
-                        <div *ngIf="row.type==='action'" class="print-note">
-                            <ion-icon ios="ios-clipboard" md="md-clipboard"></ion-icon>
-                        </div>
-                        <div *ngIf="row.type==='action.label'" class="print">
-                            <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                        <div *ngIf="row.type==='action'" class="icon-action add-pointer">
+                            <div  class="print" tabindex="0">
+                                <span class="tooltip">
+                                    <i class="material-icons-outlined">print</i>
+                                    <span class="tooltiptext">Print Completion Certificate</span>
+                                </span>&nbsp;&nbsp;
+                                </div>
+                            <div *ngIf="row.key === true" class="print-note add-pointer" tabindex="0">
+                                <span class="tooltip">
+                                    <i  class="material-icons-outlined">description</i>
+                                    <span class="tooltiptext">Print Submission</span>
+                                </span>&nbsp;&nbsp;
+                                </div>
+                            <div class="print-note add-pointer" tabindex="0">
+                                <span class="tooltip">
+                                    <i class="material-icons-outlined">rate_review</i>
+                                    <span class="tooltiptext">Rate and review</span>&nbsp;&nbsp;
+                                </span>
+                            </div>
+    
                         </div>
                     </ion-col>
                 </ng-container>
             </ion-row>    
         </div>
 </ion-grid>
+<div *ngIf="showPaging" class="ion-text-center paging-align ion-text-md-right ion-text-lg-right ion-text-xl-right">
+    <app-app-pagination (pageChange)="pageChanged($event)"></app-app-pagination>
+</div>

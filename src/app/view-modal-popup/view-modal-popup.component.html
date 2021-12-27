@@ -1,4 +1,4 @@
- <div class="container-content" name="fieldName" ngDefaultControl>
+<div class="container-content" name="fieldName" ngDefaultControl>
     <ion-grid>
         <ion-row>
             <ion-col>
@@ -7,15 +7,9 @@
         </ion-row>
         <ion-row>
             <ion-col class="column-adjust">
-                <app-dropdown 
-                            name="supportLanguages"
-                            [data]="supportLanguages"
-                            [placeholder]="defaultLanguage"
-                            displayBy="language"
-                            value="id"
-                            [(ngModel)]="dummyData.selectLanguages"
-                            (ngModelChange)="uiUpdateDefaultResponse($event)"
-                ></app-dropdown>
+                <app-dropdown name="supportLanguages" [data]="supportLanguages" [placeholder]="defaultLanguage"
+                    displayBy="language" value="id" [(ngModel)]="dummyData.selectLanguages"
+                    (ngModelChange)="uiUpdateDefaultResponse($event)"></app-dropdown>
             </ion-col>
         </ion-row>
         <ion-row>
@@ -25,8 +19,7 @@
         </ion-row>
         <ion-row>
             <ion-col>
-                <ion-input class="input-box" [(ngModel)]="dummyData.content3"
-                ></ion-input>
+                <ion-input class="input-box" [(ngModel)]="dummyData.content3"></ion-input>
             </ion-col>
         </ion-row>
         <ion-row class="set-thumbnail">
@@ -34,8 +27,7 @@
                 <ion-label>{{dummyData.content4 }}</ion-label>
             </ion-col>
             <ion-col size="4">
-                <ion-toggle [(ngModel)]="dummyData.thumnailView"
-                [checked]="dummyData.thumnailView"></ion-toggle>
+                <ion-toggle [(ngModel)]="dummyData.thumnailView" [checked]="dummyData.thumnailView"></ion-toggle>
             </ion-col>
         </ion-row>
         <ion-row>
@@ -46,8 +38,9 @@
     </ion-grid>
 
     <ion-segment value="all" mode="md" ngDefaultControl (ionChange)="segmentChanged($event)">
-        <ion-segment-button value="file" class="seg-texting text-font" [(ngModel)]="dummyData.segment1" >{{dummyData.segment1 }}</ion-segment-button>
-        <ion-segment-button value="photo" class="seg-texting text-font" [(ngModel)]="dummyData.segment2" >
+        <ion-segment-button value="thumnailView" class="seg-texting text-font" [(ngModel)]="dummyData.segment1">
+            {{dummyData.segment1 }}</ion-segment-button>
+        <ion-segment-button value="tableView" class="seg-texting text-font" [(ngModel)]="dummyData.segment2">
             {{dummyData.segment2 }}
         </ion-segment-button>
     </ion-segment>
@@ -64,7 +57,7 @@
         <ion-grid *ngIf="segment === 'thumnailView'">
             <ion-row *ngFor="let data of dummyData.segmentData">
                 <ion-col>
-                    <ion-checkbox [(ngModel)]="data.isChecked" [disabled]="data.default" ></ion-checkbox>
+                    <ion-checkbox [(ngModel)]="data.isChecked" [disabled]="data.default"></ion-checkbox>
                     <ion-text class="segment-data">{{ data.name }}</ion-text>
                 </ion-col>
             </ion-row>
@@ -75,7 +68,7 @@
         <ion-grid *ngIf="segment === 'tableView'">
             <ion-row *ngFor="let data of dummyData.segmentDataTable">
                 <ion-col>
-                    <ion-checkbox [(ngModel)]="data.isChecked" [disabled]="data.default" ></ion-checkbox>
+                    <ion-checkbox [(ngModel)]="data.isChecked" [disabled]="data.default"></ion-checkbox>
                     <ion-text class="segment-data">{{ data.name }}</ion-text>
                 </ion-col>
             </ion-row>
@@ -94,7 +87,7 @@
                 </ion-text>
             </ion-col>
             <ion-col size="3">
-                <ion-toggle [(ngModel)]="dummyData.lastToggle" ></ion-toggle>
+                <ion-toggle [(ngModel)]="dummyData.lastToggle"></ion-toggle>
             </ion-col>
         </ion-row>
         <ion-row>

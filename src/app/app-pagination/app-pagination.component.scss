@@ -1,0 +1,59 @@
+::ng-deep .ngx-pagination {
+    font-family: var(--app-semi-bold-font);
+    font-size: var(--app-heading2-font-size);
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 400 !important;
+  }
+  
+  ::ng-deep .ngx-pagination .pagination-next a::after {
+    content: none !important;
+  }
+  
+  ::ng-deep .ngx-pagination .pagination-next.disabled::after {
+    content: none !important;
+  }
+  
+  ::ng-deep .ngx-pagination .pagination-previous a::before {
+    content: none !important;
+  }
+  
+  ::ng-deep .ngx-pagination .pagination-previous.disabled::before {
+    content: none !important;
+  }
+  
+  ::ng-deep .ngx-pagination li.pagination-previous a {
+    color: var(--app-primary-color) !important;
+    font-size: var(--app-title-font-size) !important;
+    font-weight: 400 !important;
+  }
+  
+  ::ng-deep .ngx-pagination li.pagination-next a {
+    color: var(--app-primary-color) !important;
+    font-size: var(--app-title-font-size) !important;
+    font-weight: 400 !important;
+  }
+  
+  ::ng-deep .ngx-pagination li a span {
+    color: var(--app-tertiary-clr) !important;
+  }
+  
+  ::ng-deep .ngx-pagination li :hover {
+    outline: none;
+    background: none !important;
+  }
+  ::ng-deep .ngx-pagination .current {
+    background: var(--app-primary-color) !important;
+    padding: 4px 15px !important;
+    font-family: var(--app-semi-bold-font);
+    font-weight: 400;
+    border-radius: 18%;
+  }
+  ::ng-deep .ngx-pagination .disabled {
+    font-size: var(--app-title-font-size) !important;
+    padding: 0.5rem 0.5rem;
+  }
+  

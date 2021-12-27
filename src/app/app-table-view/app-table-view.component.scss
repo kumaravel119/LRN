@@ -3,13 +3,30 @@
     font-size: 25px;
 }
 
+.text-font-header{
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    
+    /* Brand Primary/LRN Dark Blue */
+    
+    color: #162E5C;
+}
+
 .create-coloumn{
     display: flex;
 }
 ion-col{
     width:  auto;
     min-width: 100px;
-    // max-width: 300px;
+    max-width: 700px;
 }
 
 .button{
@@ -20,8 +37,17 @@ ion-col{
 .print{
     display: flex;
     padding-right: 20px;
+    color: #5F6A6A;
+}
+.print-note{
+    display: flex;
+    padding-right: 20px;
+    color: #5F6A6A;
 }
 
+.icon-action{
+    display: flex;
+}
 .text-font{
     color: darkblue;
     font-size: 20px;
@@ -29,7 +55,7 @@ ion-col{
 
 .td-header{
     color: darkblue;
-    font-size: 18px;
+    // font-size: 18px;
     font: bold;
 }
 
@@ -42,13 +68,181 @@ ion-col{
 
  ion-row:nth-child(odd) {
     .create-coloumn{
-        background: lightgrey;
+        background: #F3F5F5;
         height: 50px;
         align-items: center;
     }
+  }
+
+  .text-font-data{
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height, or 100% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    
+    /* Brand Secondary/LRN Steel */
+    
+    color: #1B242B;
+      font-size: 14px;
+      float: left;
+      display: flex;
+      align-items: flex-start;
   }
   
 //   ion-row:nth-child(even) {
 //     background: blue;
 //   }
-#customers ion-col:nth-child(even){background-color: red;}
+.link{
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height, or 100% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    text-decoration-line: underline;
+    
+    /* Brand Secondary/LRN Blue */
+    
+    color: #0061A4;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    // border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 130%;
+    left: 50%;
+    margin-left: -90px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .add-pointer{
+      cursor: pointer;
+  }
+
+  .table-title{
+    //styleName: H5 - Header 5 - PN 24pt Regular;
+    font-family: Proxima Nova;
+    font-style: bold;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #162E5C;
+  }
+
+  .button-history{
+    background-color: white;
+    color: #00A59C;
+    height: 45px;
+    width: 40%;
+    font-size: 15px;
+    line-height: 25px;
+    align-items: center;
+    text-align: center;
+    border-color: #00A59C;
+    display: flex;
+    justify-content: center;
+    border: 3px solid black;
+    border-color: #00A59C;
+    /* box-shadow: 1px 1px 0px rgb(27 36 43 / 25%); */
+    border-radius: 2px; 
+    display: flex;
+    float: right;
+  }
+
+  .apply-padding{
+      padding-bottom: 15px;
+  }
+
+  // ::ng-deep .highlight{
+  //   background: yellow;
+  // }
+
+  .asc-icon{
+    color:#5F6A6A;
+    display: flex;
+    align-items: center;
+    float: right;
+    padding-left: 8px;
+  }
+
+  .desc-icon{
+    color:#5F6A6A;
+    display: flex;
+    align-items: center;
+    float: right;
+    padding-left: 8px;
+  }
+
+  .no-sort::after { 
+    opacity: 0;
+      content:unset;
+  }
+  
+  .no-sort { 
+      opacity: 0;
+      content:unset; 
+  }
+
+  @media only screen and (max-width: 600px) {
+      .parent{
+        width: 100%;
+        min-width: 1500px;
+      }
+  }
+
+  @media (max-width: 750px) {
+    .parent{
+        width: 100%;
+        min-width: 1500px;
+      }
+    }
+
+//   @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+//       .parent{
+//           width: 100%;
+//           min-width: 1300px;
+//       }
+//   }
+//   @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+//       .parent{
+//           width: 100%;
+//           min-width: 1300px;
+//       }
+//   }

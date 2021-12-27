@@ -23,6 +23,10 @@ import { FormsModule } from '@angular/forms';
 import { DifferentDropdownComponent } from './different-dropdown/different-dropdown.component';
 import { OpenDifferDropdownComponent } from './open-differ-dropdown/open-differ-dropdown.component';
 import { CompletionHistoryComponentComponent } from './completion-history-component/completion-history-component.component';
+import { AppPaginationComponent } from './app-pagination/app-pagination.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { SearchDirective } from './search.directive';
+import { AppfilterPipe } from './appfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,9 @@ import { CompletionHistoryComponentComponent } from './completion-history-compon
     DifferentDropdownComponent,
     OpenDifferDropdownComponent,
     CompletionHistoryComponentComponent,
+    AppPaginationComponent,
+    SearchDirective,
+    AppfilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +57,7 @@ import { CompletionHistoryComponentComponent } from './completion-history-compon
     HttpClientModule,
     IonicModule,
     FormsModule,
+    NgxPaginationModule,
     TranslateModule.forRoot(
       {
         loader : {

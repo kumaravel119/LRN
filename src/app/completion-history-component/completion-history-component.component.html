@@ -1,11 +1,11 @@
 <div class="container">
 <ion-grid>
     <ion-row>
-        <ion-col>
-            <ion-button>Back</ion-button>
+        <ion-col size="5">
+            <button ion-button class="back-button" tabindex="0"><i class="material-icons-outlined">arrow_back</i>Back</button>
         </ion-col>
-        <ion-col>
-            <ion-text class="completion-title">Completion History</ion-text>
+        <ion-col size="7">
+            <ion-text class="completion-title" tabindex="0" alt="text">Completion History</ion-text>
         </ion-col>
     </ion-row>
     <ion-row>
@@ -20,16 +20,21 @@
             <ion-button>2020</ion-button>
         </ion-col>
         <ion-col>
-            <div class="search-box">
-                <ion-searchbar></ion-searchbar>
-            </div>
+            <div class="search-container">
+                <input class="input-box" type="text" value="" placeholder="Search" name="search" id="myInput" (input)="onSearchChange($event)">
+                <span class="search-icon" *ngIf="!searchQuery"><i class="material-icons-outlined">search</i></span>
+                <span class="close-icon"  *ngIf="searchQuery" (click)="cancel()"><i class="material-icons-outlined small">close</i></span>
+              </div>
         </ion-col>
     </ion-row>
     <ion-row>
         <ion-col>
             <app-app-table-view
             [title]="title"
-            [data]="gridData"></app-app-table-view>
+            [data]="gridData"
+            (ipageChange)="pageChange"
+            [showPaging]="isShowPaging"
+            (iSortColumn)="sortingTable($event)"></app-app-table-view>
         </ion-col>
     </ion-row>
     <ion-row>
